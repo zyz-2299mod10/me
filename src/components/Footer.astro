@@ -4,6 +4,8 @@ import { siteConfig } from "../config";
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 const hasEducation = siteConfig.education && siteConfig.education.length > 0;
+const hasCourses = siteConfig.courses && siteConfig.courses.length > 0;
+const hasMoments = siteConfig.moments && siteConfig.moments.length > 0;
 ---
 
 <footer class="relative bg-gray-50 border-t border-gray-200">
@@ -71,10 +73,10 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             >
           </a>
           <a
-            href={siteConfig.social.twitter}
+            href={siteConfig.social.resume}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Twitter"
+            aria-label="Resume"
             class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)]"
             style={`--accent-color: ${siteConfig.accentColor}`}
           >
@@ -89,10 +91,11 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
               stroke-linecap="round"
               stroke-linejoin="round"
               class="h-6 w-6"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path
-                d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg
             >
+              <rect x="2" y="2" width="20" height="20" rx="4" />
+              <path d="M10 10h-1a2 2 0 0 0 -2 2v1.5a2 2 0 0 0 2 2h1" />
+              <path d="M13.5 10l2 5.5l2 -5.5" />
+            </svg>
           </a>
           <a
             href={siteConfig.social.github}
@@ -126,15 +129,15 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           <a
             href="#about"
             class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
-            >About</a
+            >About Me</a
           >
           {
-            hasProjects && (
+            hasEducation && (
               <a
-                href="#projects"
+                href="#education"
                 class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
               >
-                Projects
+                Education
               </a>
             )
           }
@@ -149,12 +152,32 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             )
           }
           {
-            hasEducation && (
+            hasProjects && (
               <a
-                href="#education"
+                href="#projects"
                 class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
               >
-                Education
+                Projects
+              </a>
+            )
+          }
+          {
+            hasCourses && (
+              <a
+                href="#courses"
+                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+              >
+                Courses
+              </a>
+            )
+          }
+          {
+            hasMoments && (
+              <a
+                href="#moments"
+                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+              >
+                Moments
               </a>
             )
           }

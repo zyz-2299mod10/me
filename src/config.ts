@@ -106,4 +106,11 @@ export const siteConfig = {
       skills: ["C++", "OpenGL"],
     },
   ],
+  moments: [
+    {
+      title: "My First Moment",
+      description: "This is a summary of my first moment where I discuss...",
+      link: "/moments/first-article",
+    },
+  ],
 };

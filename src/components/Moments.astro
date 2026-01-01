@@ -1,0 +1,56 @@
+---
+import { siteConfig } from "../config";
+const hasMoments = siteConfig.moments && siteConfig.moments.length > 0;
+---
+
+{
+  hasMoments && (
+    <section id="moments" class="p-8 sm:p-12 md:p-16 lg:p-24 bg-white">
+      <div class="space-y-8 sm:space-y-12">
+        <div class="flex items-center gap-4">
+          <div
+            class="w-1.5 h-8 sm:h-10 rounded-full"
+            style={`background-color: ${siteConfig.accentColor}`}
+          />
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+            Moments
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {siteConfig.moments.map((moment, index) => {
+            return (
+              <a href={moment.link} class="group block relative p-6 sm:p-8 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 transition-all duration-300 w-full hover:-translate-y-1 hover:bg-white hover:shadow-xl hover:border-gray-300">
+                  <div class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center bg-gray-900 rounded-full text-white transition-all duration-300 group-hover:bg-gray-700 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0">
+                      <svg
+                        class="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                  </div>
+
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-gray-900 mt-1 pr-12">
+                        {moment.title}
+                    </h3>
+
+                    <p class="text-base text-gray-600 leading-relaxed">
+                      {moment.description}
+                    </p>
+                  </div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  )
+}
