@@ -22,6 +22,10 @@ export const siteConfig = {
         "Developed a framework for graphic-design image layer decomposition and reconstruction, enabling reliable separation of text, objects, and backgrounds with high visual coherence.",
       link: "https://github.com/zyz-2299mod10/TAS-LayerD",
       skills: ["Layer Decomposition", "Computer Vision", "Digital Image Processing", "Python"],
+      media: {
+        type: "image",
+        url: "/data/TAS-LayerD.png", // Placeholder using existing image
+      },
     },
     {
       name: "Video Enhancer",
@@ -29,6 +33,10 @@ export const siteConfig = {
         "Developed a framework to improve the image quality and to develop new functionalities of a USB camera. Including barrel distortion adjustment, under- and over-exposure correction, white balance, image super-resolution.",
       link: "https://github.com/zyz-2299mod10/Video-Enhancer",
       skills: ["Computational Photography", "Digital Image Processing", "Python"],
+      media: {
+        type: "image",
+        url: "/data/VideoEnhancer.png", // Placeholder using existing image
+      },
     },
     {
       name: "Medical Image Segmentation",
@@ -36,6 +44,10 @@ export const siteConfig = {
         "Developed a medical image segmentation model using a UNet-Transformer architecture with Masked Autoencoder self-supervised pretraining to improve feature representation and segmentation performance.",
       link: "https://github.com/zyz-2299mod10/ML/tree/main/HW3",
       skills: ["Medical Image", "Computer Vision", "Python"],
+      media: {
+        type: "image",
+        url: "/data/medical.png", // Placeholder using existing image
+      },
     },
     {
       name: "Coarse pose Insertion with Keypoint Detection",
@@ -43,6 +55,10 @@ export const siteConfig = {
         "Developed a vision-based peg insertion framework for complex geometries by keypoint prediction and integrating a corner prediction algorithm for precise hole pose estimation.",
       link: "https://github.com/zyz-2299mod10/PDM/tree/main/CourseProject",
       skills: ["Robotics", "Computer Vision", "Python"],
+      media: {
+        type: "video",
+        url: "/data/PDM.mp4", // Placeholder using existing image
+      },
     },
   ],
   experience: [
